@@ -1,0 +1,1 @@
+pandoc -s -N --template=template2.latex --filter pandoc-eqnos manuscript.md -o manuscript.pdf
