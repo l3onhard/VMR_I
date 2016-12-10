@@ -1,1 +1,1 @@
-pandoc -s -N --template=template2.latex --filter pandoc-eqnos manuscript.md -o manuscript.pdf
+pandoc -s -N --template=template.latex --filter pandoc-eqnos lecturex--VMR_I--2016.12.10.md -o lecturex--VMR_I--2016.12.10.pdf
