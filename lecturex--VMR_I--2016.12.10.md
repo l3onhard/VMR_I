@@ -22,8 +22,8 @@ Nach der Bemerkung reicht es die Umformungen (I) und (II) zu betrachten:
 
 $$
 A = \begin{pmatrix}
-a_{1}^T\\ 
-\vdots \\ 
+a_{1}^T\\
+\vdots \\
 a_{m}^T
 \end{pmatrix}
 $$
@@ -50,7 +50,7 @@ Also ist $ZR(B) = ZR(A)$ .
 $$ \begin{aligned}
 v &\in ZR(A) = span(a_{1}, \cdots, a_{m}) \\[3mm]
 \implies v &= \alpha_{1} a_{1} + \cdots + \alpha_{i} a_{i} + \cdots + \alpha_{j} a_{j} + \cdots + \alpha_{m} a_{m} \\
-&= \alpha_{1} a_{1} + \cdots + \alpha_{i} (a_{i} + a_{j}) + \cdots + (\alpha_{j} - \alpha_{i}) a_{j} + \cdots + \alpha_{m} a_{m} \in ZR(B) 
+&= \alpha_{1} a_{1} + \cdots + \alpha_{i} (a_{i} + a_{j}) + \cdots + (\alpha_{j} - \alpha_{i}) a_{j} + \cdots + \alpha_{m} a_{m} \in ZR(B)
 \end{aligned} $$
 
 und
@@ -72,29 +72,29 @@ Jede Matrix $A$ kann durch elementare Zeilenumformungen in eine Matrix $\tilde{A
 
 $$ \begin{aligned}
 a_{1} &= \begin{pmatrix}
-0 \\ 
-0 \\ 
+0 \\
+0 \\
 0 \\
 2 \\
 1
-\end{pmatrix}, 
+\end{pmatrix},
 a_{2} = \begin{pmatrix}
-0 \\ 
-1 \\ 
+0 \\
+1 \\
 2 \\
 2 \\
 0
-\end{pmatrix}, 
+\end{pmatrix},
 a_{3} = \begin{pmatrix}
-0 \\ 
--1 \\ 
+0 \\
+-1 \\
 2 \\
 1 \\
 -1
-\end{pmatrix}, 
+\end{pmatrix},
 a_{4} = \begin{pmatrix}
-0 \\ 
-0 \\ 
+0 \\
+0 \\
 0 \\
 1 \\
 2
@@ -104,9 +104,9 @@ U &= span(a_{1}, a_{2}, a_{3}, a_{4})
 
 \begin{align*}
 A &= \begin{gmatrix}[p]
-0 & 0 & 0 & 2 & -1 \\ 
-0 & 1 & -2 & 1 & 0 \\ 
-0 & -1 & 2 & 1 & -1 \\ 
+0 & 0 & 0 & 2 & -1 \\
+0 & 1 & -2 & 1 & 0 \\
+0 & -1 & 2 & 1 & -1 \\
 0 & 0 & 0 & 1 & 2
 \rowops
 	\swap{0}{1}
@@ -115,7 +115,7 @@ A &= \begin{gmatrix}[p]
 \begin{gmatrix}[p]
 0 & 1 & -2 & 1 & 0 \\
 0 & 0 & 0 & 2 & -1 \\
-0 & -1 & 2 & 1 & -1 \\ 
+0 & -1 & 2 & 1 & -1 \\
 0 & 0 & 0 & 1 & 2
 \rowops
 	\add[1]{0}{3}
@@ -124,7 +124,7 @@ A &= \begin{gmatrix}[p]
 \begin{gmatrix}[p]
 0 & 1 & -2 & 1 & 0 \\
 0 & 0 & 0 & 2 & -1 \\
-0 & 0 & 0 & 2 & -1 \\ 
+0 & 0 & 0 & 2 & -1 \\
 0 & 0 & 0 & 1 & 2
 \rowops
 	\swap{1}{3}
@@ -133,7 +133,7 @@ A &= \begin{gmatrix}[p]
 \begin{gmatrix}[p]
 0 & 1 & -2 & 1 & 0 \\
 0 & 0 & 0 & 1 & 2 \\
-0 & 0 & 0 & 2 & -1 \\ 
+0 & 0 & 0 & 2 & -1 \\
 0 & 0 & 0 & 2 & -1
 \rowops
 	\add[-2]{1}{2}
@@ -143,7 +143,7 @@ A &= \begin{gmatrix}[p]
 \begin{gmatrix}[p]
 0 & 1 & -2 & 1 & 0 \\
 0 & 0 & 0 & 1 & 2 \\
-0 & 0 & 0 & 0 & -5 \\ 
+0 & 0 & 0 & 0 & -5 \\
 0 & 0 & 0 & 0 & -5
 \rowops
 	\add[-1]{2}{3}
@@ -152,8 +152,77 @@ A &= \begin{gmatrix}[p]
 \begin{gmatrix}[p]
 0 & 1 & -2 & 1 & 0 \\
 0 & 0 & 0 & 1 & 2 \\
-0 & 0 & 0 & 0 & -5 \\ 
+0 & 0 & 0 & 0 & -5 \\
 0 & 0 & 0 & 0 & 0
 \end{gmatrix}
 = B
 \end{align*}
+
+Also ist $(b_{1}, b_{2}, b_{3})$ mit:
+
+$$ \begin{aligned}
+b_{1} &= \begin{pmatrix}
+0 \\
+1 \\
+2 \\
+1 \\
+0
+\end{pmatrix},
+b_{2} = \begin{pmatrix}
+0 \\
+0 \\
+0 \\
+1 \\
+2
+\end{pmatrix},
+b_{3} = \begin{pmatrix}
+0 \\
+0 \\
+0 \\
+0 \\
+5
+\end{pmatrix}
+\end{aligned} $$
+
+eine Basis von $U = span(a_{1}, a_{2}, a_{3}, a_{4})$.
+
+## Korollar 4.6
+
+Für Vektoren $v_{1}, \cdots, v_{n} \in K^n$ sind folgende Aussagen äquivalent:
+
+1) $(v_{1}, \cdots, v_{n})$ ist Basis von $K^n$.
+2) Die Matrix $A = \begin{pmatrix} v_{1}^T \\ \vdots \\ v_{n}^T \end{pmatrix}$ lässt sich durch elemntare Zeilenumformungen in eine obere Dreiecksmatrix überführen und alle Einträge auf der Hauptdiagonalen sind $\neq 0$.
+
+# 5. Lineare Gleichungssysteme
+
+Nach [Lemma 1.8] definiert jede Matrix $A: K^n \to K^m$ durch $x \mapsto Ax$.
+
+## Defininition 5.1
+
+Ist $A = (a_{ij}) \sim (m, n)$ eine Matrix und $b = \begin{pmatrix} b_{1} \\ \vdots \\ b_{m} \end{pmatrix} \in K^m$, so heißt:
+
+$$
+Ax = b \iff
+\begin{matrix}
+a_{11} x_{1} + \cdots + a_{1n} x_{n} = b_{1} \\
+\vdots \\
+a_{m1} x_{1} + \cdots + a_{mn} x_{n} = b_{m}
+\end{matrix}
+$$
+
+ein **lineares Gleichungssystem** mit $m$ Gleichungen und $n$ Unbekannten.
+
+Ist $b \neq 0$, so heißt das lineare Gleichungssystem **inhomogen**, andernfalls **homogen**. $Ax = 0$ heißt, dass zu dem inhomogenen System gehörende homogene lineare Gleichungssystem.
+
+Die Menge $\mathbb{L}(A,b) = \{x \in K^n | Ax = b\} \subset K^n$ heißt der Lösungsraum des linearen Gleichungssystems $Ax = b$ ($b = 0$ oder $b \neq 0$).
+
+$A$ heißt die **Koeffizientenmatrix**, die Einträge $a_{ij}$ **Koeffizienten** des linearen Gleichungssystems. Die Matrix $(A|b)$ heißt die **erweiterte Matrix des linearen Gleichungssystems** $Ax = b$.
+
+### Bemerkung
+
+Bezeichnet $f: K^n \to K^m$ mit $f(x) = Ax$ die durch $A \sim (m,n)$ definiertes lineare Abbildung, so gilt:
+
+$$ \begin{aligned}
+\mathbb{L}(A, b) &= f^{-1}(b)\ \text{(Menge der Urbilder von b unter f)} \\
+\mathbb{L}(A, 0) &= Ker f
+\end{aligned} $$

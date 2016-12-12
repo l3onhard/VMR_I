@@ -37,6 +37,9 @@
   \strut\vrule % the `\vrule` is as high and deep as a strut
   \hspace{-\arraycolsep}%
 }
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 % -----------------------
 
 \usepackage{ifxetex,ifluatex}
