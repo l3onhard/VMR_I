@@ -226,3 +226,36 @@ $$ \begin{aligned}
 \mathbb{L}(A, b) &= f^{-1}(b)\ \text{(Menge der Urbilder von b unter f)} \\
 \mathbb{L}(A, 0) &= Ker f
 \end{aligned} $$
+
+### Beispiel
+
+$$ \begin{aligned}
+&\begin{matrix}
+2 x_1 - 3 x_2 + x_3 &= 5 \\
+- x_1 + 2 x_2 + 4 x_3 &= 1 \\
+x_1 - x_2 &= 2
+\end{matrix}
+\ \ \ \hat{=} \ \
+\begin{pmatrix}
+2  & -3 & 1 & \BAR & 5 \\
+-1 & 2  & 4 & \BAR & 1 \\
+1  & -1 & 0 & \BAR & 2
+\end{pmatrix} \text{erweiterte Matrix } (A|b) \\[3mm]
+&\begin{pmatrix}
+2  & -3 & 1 \\
+-1 & 2  & 4 \\
+1  & -1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{pmatrix}
+=
+\begin{pmatrix}
+5 \\
+1 \\
+2
+\end{pmatrix} \\
+&\text{Koeffizientenmatrix}
+\end{aligned} $$

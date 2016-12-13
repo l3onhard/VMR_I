@@ -17,6 +17,7 @@
 
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
+\usepackage{mathtools}
 
 % -----------------------
 \usepackage{gauss}
