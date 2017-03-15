@@ -1,0 +1,101 @@
+% filename: template.latex
+
+\documentclass[]{article}
+\usepackage[T1]{fontenc}
+
+% -----------------------
+% Using abstracts
+\usepackage{abstract}
+
+% -----------------------
+% Using fancy headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[CO,CE]{}
+\fancyfoot[CO,CE]{}
+\fancyfoot[LE,RO]{\thepage}
+
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{mathtools}
+
+% -----------------------
+\usepackage{gauss}
+
+% patch gauss macros for doing their work in `align'
+% and other amsmath environments; see
+% http://tex.stackexchange.com/questions/146532/
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\g@matrix
+ {\vbox\bgroup}
+ {\vbox\bgroup\normalbaselines}% restore the standard baselineskip
+ {}{}
+\makeatother
+
+\newcommand{\BAR}{%
+  \hspace{-\arraycolsep}%
+  \strut\vrule % the `\vrule` is as high and deep as a strut
+  \hspace{-\arraycolsep}%
+}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% -----------------------
+
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\author{}
+\date{}
+
+\begin{document}
+
+%-----------------------------------
+% Adding the abstract
+
+
+\[
+\begin{array}
+A & B 
+\end{array}
+\]
+
+\end{document}
